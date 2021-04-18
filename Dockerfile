@@ -25,10 +25,10 @@ RUN apt-get update \
  && pip install py4j \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/* \
- && mkdir /home/covid_app
+ && mkdir /home/app
  
-WORKDIR /home/covid_app
-COPY ./covid_app/* /home/covid_app/
+WORKDIR /home/app
+COPY ./app/* /home/app/
 
 # http://blog.stuart.axelbrooke.com/python-3-on-spark-return-of-the-pythonhashseed
 ENV PYTHONHASHSEED 0

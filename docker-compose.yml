@@ -24,7 +24,7 @@ services:
     volumes:
       - ./conf/master:/conf
       - ./data:/tmp/data
-      - ./covid_app:/home/covid_app
+      - ./app:/home/app
 
   worker:
     image: gettyimages/spark

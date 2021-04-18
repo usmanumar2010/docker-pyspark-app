@@ -59,4 +59,4 @@ if __name__=='__main__':
 
 	pandas_df = output.toPandas()
 	pandas_df.reset_index().drop('index', axis=1, inplace=True)
-	pandas_df.to_json("/home/covid_app/transformed_data/output.json",orient='records')
+	pandas_df.to_json("/home/app/transformed_data/output.json",orient='records')
