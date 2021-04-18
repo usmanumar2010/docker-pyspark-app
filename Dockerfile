@@ -23,6 +23,8 @@ RUN apt-get update \
  && apt-get install -y python-pip \
  && apt-get install -y python3-pip \
  && pip install py4j \
+ && pip install numpy==1.17.1 \
+ && pip install pandas==0.25.3  \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/* \
  && mkdir /home/app
@@ -42,8 +44,6 @@ RUN apt-get update \
  && rm -rf /var/lib/apt/lists/* 
 
 
-  
- 
 # HADOOP
 ENV HADOOP_VERSION 3.0.0
 ENV HADOOP_HOME /usr/hadoop-$HADOOP_VERSION
@@ -72,8 +72,6 @@ RUN curl -sL --retry 3 \
 
 WORKDIR $SPARK_HOME
 
-#PYTHON LIBRARIES
-RUN pip3 install pandas \
-     && pip install pandas 
+
 
 CMD ["bin/spark-class", "org.apache.spark.deploy.master.Master"]
