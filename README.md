@@ -44,7 +44,8 @@ After cloning this app
 Other:
   
    to access container interactive shell use this command
+   
     
-   ``` - sudo docker exec -it docker-spark-master_master_1 /bin/bash
+   ```- sudo docker exec -it docker-spark-master_master_1 /bin/bash
     
     
