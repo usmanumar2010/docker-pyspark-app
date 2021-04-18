@@ -41,11 +41,11 @@ After cloning this app
   ```- sudo docker exec docker-spark-master_master_1 /bin/bash bin/spark-submit /home/app/code/main.py```
   
  
-Other:
+**Other**:
   
    to access container interactive shell use this command
    
     
-   - sudo docker exec -it docker-spark-master_master_1 /bin/bash
+   ```- sudo docker exec -it docker-spark-master_master_1 /bin/bash
     
     
