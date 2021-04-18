@@ -39,3 +39,12 @@ After cloning this app
 **Terminal 2** : in order to run pysprak script run this command 
 
   ```- sudo docker exec docker-spark-master_master_1 /bin/bash bin/spark-submit /home/app/code/main.py```
+  
+ 
+Other:
+  
+   to access container interactive shell use this command
+    
+   ```- sudo docker exec -it docker-spark-master_master_1 /bin/bash
+    
+    
