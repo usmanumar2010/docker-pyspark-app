@@ -1,6 +1,6 @@
 # docker-pyspark-app
 
-This repository demonstrating a pyspark application using docker.The dataset has being download from the following repository
+This repository demonstrating a pyspark application using docker.The dataset has been downloaded from the following repository
 
 https://github.com/owid/covid-19-data/tree/master/public/data#%EF%B8%8F-download-our-complete-covid-19-dataset--csv--xlsx--json
 
