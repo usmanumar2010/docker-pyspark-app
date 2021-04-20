@@ -1,7 +1,7 @@
 version: "2.2"
 services:
   master:
-    image: gettyimages/spark
+    image: spark/app:latest
     command: bin/spark-class org.apache.spark.deploy.master.Master -h master
     hostname: master
     environment:
@@ -27,7 +27,7 @@ services:
       - ./app:/home/app
 
   worker:
-    image: gettyimages/spark
+    image: spark/app:latest
     command: bin/spark-class org.apache.spark.deploy.worker.Worker spark://master:7077
     hostname: worker
     environment:

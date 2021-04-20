@@ -1,5 +1,5 @@
 FROM debian:stretch
-MAINTAINER Getty Images "https://github.com/gettyimages"
+MAINTAINER usman "https://github.com/gettyimages"
 
 RUN apt-get update \
  && apt-get install -y locales \
@@ -23,14 +23,14 @@ RUN apt-get update \
  && apt-get install -y python-pip \
  && apt-get install -y python3-pip \
  && pip install py4j \
- && pip install numpy==1.17.1 \
- && pip install pandas==0.25.3  \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/* \
  && mkdir /home/app
  
+ 
 WORKDIR /home/app
 COPY ./app/* /home/app/
+RUN pip3 install -r requirements.txt
 
 # http://blog.stuart.axelbrooke.com/python-3-on-spark-return-of-the-pythonhashseed
 ENV PYTHONHASHSEED 0
