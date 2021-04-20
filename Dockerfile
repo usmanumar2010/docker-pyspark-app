@@ -19,10 +19,9 @@ ENV LC_ALL en_US.UTF-8
 RUN apt-get update \
  && apt-get install -y curl unzip \
     python3 python3-setuptools \
- && ln -s /usr/bin/python3 /usr/bin/python \
  && apt-get install -y python-pip \
  && apt-get install -y python3-pip \
- && pip install py4j \
+ && pip3 install py4j \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/* \
  && mkdir /home/app
@@ -72,6 +71,6 @@ RUN curl -sL --retry 3 \
 
 WORKDIR $SPARK_HOME
 
-
+RUN cp /usr/bin/python3 /usr/bin/python 
 
 CMD ["bin/spark-class", "org.apache.spark.deploy.master.Master"]
